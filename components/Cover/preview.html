@@ -1,0 +1,54 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Azimuth</title>
+<style>
+  html, body { margin: 0; height: 100%; }
+  body { background: var(--band); color: var(--band-text); font-family: var(--font-sans); overflow: hidden; }
+  .cover { position: relative; width: 960px; height: 288px; overflow: hidden; }
+  .art { position: absolute; top: 0; left: 480px; width: 480px; height: 288px; overflow: hidden; }
+  .art svg { display: block; width: 480px; height: 288px; }
+  .frame { fill: var(--band-2); stroke: var(--band-text); stroke-width: 1.5; }
+  .cell { fill: none; stroke: #3a5679; stroke-width: 1; }
+  .k { fill: var(--band-text-2); font: 600 10px var(--font-sans); }
+  .v { fill: var(--band-text); font: 600 13px var(--font-sans); }
+  .m { fill: var(--band-text); font: 500 13px var(--font-mono); }
+  .needle { fill: none; stroke: var(--band-text-2); stroke-width: 1; }
+  .words { position: absolute; left: 32px; bottom: 32px; max-width: 440px; }
+  .name { margin: 0; font-size: 80px; line-height: .95; font-weight: 600; letter-spacing: -0.01em; }
+  .tag { margin: 12px 0 0 4px; font-size: 14px; line-height: 20px; color: var(--band-text-2); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks      one title block 400x168 on band-2, bled off the right edge, with the system's identity as its fields
+  arrangement square cells as in a drawing frame; a thin azimuth arc above shows the name: a bearing measured from north
+  scales      cell height 42; outer border 1.5 (as the component); no radius, as all Azimuth surfaces
+-->
+<path class="needle" d="M120 64 A160 160 0 0 1 440 64"/><path class="needle" d="M280 64V20M280 20l-4 8M280 20l4 8"/>
+<rect class="frame" x="40" y="88" width="480" height="168"/>
+<path class="cell" d="M40 130H520M40 172H520M40 214H520M140 88V130M200 130V214M300 130V214M400 130V214"/>
+<text class="v" x="52" y="114">ACME</text><text class="k" x="152" y="104">Title</text><text class="v" x="152" y="121">Corporate design language</text>
+<text class="k" x="52" y="146">Document no.</text><text class="m" x="52" y="163">DS-0001</text>
+<text class="k" x="212" y="146">Revision</text><text class="m" x="212" y="163">A</text>
+<text class="k" x="312" y="146">Status</text><text class="v" x="312" y="163">Released</text>
+<text class="k" x="412" y="146">Class</text><text class="v" x="412" y="163">Public</text>
+<text class="k" x="52" y="188">Typeface</text><text class="v" x="52" y="205">Source Sans 3</text>
+<text class="k" x="212" y="188">Brand</text><text class="v" x="212" y="205">Navy 600</text>
+<text class="k" x="312" y="188">Radius</text><text class="m" x="312" y="205">0</text>
+<text class="k" x="412" y="188">Base</text><text class="v" x="412" y="205">Meridian</text>
+<text class="k" x="52" y="230">Owner</text><text class="v" x="52" y="247">Corporate Communications</text>
+</svg>
+</div>
+<div class="words">
+<h1 class="name">Azimuth</h1>
+<p class="tag">Corporate sites for manufacturers with long product lifecycles.</p>
+</div>
+</div>
+</body>
+</html>
